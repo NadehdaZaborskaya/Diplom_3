@@ -15,7 +15,6 @@ import pages.LoginPage;
 import pages.RegisterPage;
 
 import java.util.concurrent.TimeUnit;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class RegisterTest {

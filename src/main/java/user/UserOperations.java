@@ -1,9 +1,10 @@
 package user;
 
-import config.APIs;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
+import static config.APIs.*;
+import static config.BaseURI.BASE_URI;
 import static io.restassured.RestAssured.given;
 
 public class UserOperations {
@@ -14,7 +15,7 @@ public class UserOperations {
                 .and()
                 .body(user)
                 .when()
-                .post(APIs.REGISTER_PATH);
+                .post(BASE_URI +REGISTER_PATH);
         return response;
     }
 
@@ -25,7 +26,7 @@ public class UserOperations {
                 .and()
                 .body(user)
                 .when()
-                .post(APIs.LOGIN_PATH);
+                .post(BASE_URI +LOGIN_PATH);
         return response;
     }
 
@@ -40,6 +41,7 @@ public class UserOperations {
             given()
                     .header("Authorization", accessToken)
                     .when()
-                    .delete(APIs.DELETE_PATH);
+                    .delete(BASE_URI +DELETE_PATH);
     }
 }
+

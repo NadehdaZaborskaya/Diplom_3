@@ -1,14 +1,11 @@
 import config.AppConfig;
 import config.WebDriverConfig;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import pages.MainPage;
 
 import java.util.concurrent.TimeUnit;
